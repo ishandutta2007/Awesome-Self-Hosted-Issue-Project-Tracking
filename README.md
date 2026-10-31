@@ -64,9 +64,9 @@ The table below lists leading commercial self-managed and enterprise-hosted issu
 
 ## ⭐ Open-Source GitHub Projects
 
-The following curated open-source projects provide complete self-hosted control, arranged in descending order by **GitHub Stars** ✨.
+The following curated open-source projects provide complete self-hosted control, arranged in descending order by **GitHub_Stars** ✨.
 
-| Project 📦 | GitHub Stars ⭐ | License 📜 | Primary Tech Stack 🛠️ | Key Focus & Strengths 💡 |
+| Project 📦 | GitHub_Stars ⭐ | License 📜 | Primary Tech Stack 🛠️ | Key Focus & Strengths 💡 |
 | :--- | :---: | :--- | :--- | :--- |
 | **[Plane](https://github.com/makeplane/plane)** | [![Stars](https://img.shields.io/github/stars/makeplane/plane?style=social&color=white)](https://github.com/makeplane/plane/stargazers) | AGPL-3.0 | Next.js, Django, Python, PostgreSQL, Redis | Modern Jira and Linear alternative with work items, cycles (sprints), modules, and multiple view modes (List, Board, Spreadsheet, Gantt, Calendar). 🚀 |
 | **[Gitea](https://github.com/go-gitea/gitea)** | [![Stars](https://img.shields.io/github/stars/go-gitea/gitea?style=social&color=white)](https://github.com/go-gitea/gitea/stargazers) | MIT | Go, JavaScript | Painless self-hosted all-in-one software development service featuring lightweight Git hosting, milestone/issue tracking, and Kanban boards. ☕ |
