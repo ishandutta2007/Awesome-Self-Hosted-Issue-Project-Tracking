@@ -1,0 +1,223 @@
+<svg fill="none" viewBox="0 0 1200 360" width="100%" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="blur-bg" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .tagline {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #38bdf8;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .card-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      fill: #64748b;
+    }
+    .card-val {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      fill: #f8fafc;
+    }
+
+    /* Ambient dynamic animations strictly in background */
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.35; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.65; transform: scale(1.15) translate(-10px, 10px); }
+    }
+    @keyframes float-chip {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 0.4; r: 3; }
+      50% { opacity: 1; r: 5; }
+    }
+    @keyframes dash-flow {
+      to { stroke-dashoffset: -40; }
+    }
+
+    .ambient-1 {
+      animation: pulse-glow 7s ease-in-out infinite;
+      transform-origin: 200px 100px;
+    }
+    .ambient-2 {
+      animation: pulse-glow 9s ease-in-out infinite reverse;
+      transform-origin: 1000px 250px;
+    }
+    .floating-card-1 {
+      animation: float-chip 5s ease-in-out infinite;
+    }
+    .floating-card-2 {
+      animation: float-chip 6s ease-in-out infinite 1.5s;
+    }
+    .pulse-dot-anim {
+      animation: pulse-dot 2.5s ease-in-out infinite;
+    }
+    .flow-line {
+      stroke-dasharray: 6 6;
+      animation: dash-flow 2.5s linear infinite;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+  <rect width="1198" height="358" x="1" y="1" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Glowing Orbs in the background -->
+  <g filter="url(#blur-bg)">
+    <circle class="ambient-1" cx="220" cy="110" r="130" fill="#38bdf8" opacity="0.35" />
+    <circle class="ambient-2" cx="1020" cy="240" r="140" fill="#818cf8" opacity="0.35" />
+    <circle class="ambient-1" cx="800" cy="80" r="100" fill="#c084fc" opacity="0.25" />
+  </g>
+
+  <!-- Dynamic Flow Lines in background -->
+  <path class="flow-line" d="M 80,180 C 350,140 550,220 1120,170" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.2" />
+  <path class="flow-line" d="M 80,210 C 400,260 650,130 1120,200" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.2" />
+
+  <!-- Background Decorative Kanban / Sprint Preview Widgets (Right side, non-intrusive) -->
+  <g transform="translate(850, 48)" class="floating-card-1" opacity="0.95">
+    <!-- Card 1 -->
+    <rect width="280" height="90" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" />
+    <circle cx="28" cy="28" r="8" fill="#10b981" class="pulse-dot-anim" />
+    <text x="46" y="32" class="card-val">Self-Hosted Agile Tracker</text>
+    <rect x="22" y="48" width="130" height="8" rx="4" fill="#334155" />
+    <rect x="22" y="62" width="236" height="6" rx="3" fill="#1e293b" />
+    <rect x="22" y="62" width="180" height="6" rx="3" fill="#38bdf8" />
+    <rect x="210" y="20" width="54" height="20" rx="10" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1" />
+    <text x="223" y="34" font-family="sans-serif" font-size="10" font-weight="700" fill="#38bdf8">ACTIVE</text>
+  </g>
+
+  <g transform="translate(870, 160)" class="floating-card-2" opacity="0.95">
+    <!-- Card 2 -->
+    <rect width="270" height="82" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" />
+    <circle cx="28" cy="28" r="8" fill="#6366f1" />
+    <text x="46" y="32" class="card-val">Privacy &amp; Data Residency</text>
+    <rect x="22" y="48" width="150" height="8" rx="4" fill="#334155" />
+    <text x="22" y="68" class="card-label">100% On-Premises &amp; Air-Gapped</text>
+    <rect x="200" y="20" width="56" height="20" rx="10" fill="#4338ca" fill-opacity="0.3" stroke="#818cf8" stroke-width="1" />
+    <text x="212" y="34" font-family="sans-serif" font-size="10" font-weight="700" fill="#a5b4fc">SECURE</text>
+  </g>
+
+  <g transform="translate(840, 260)" class="floating-card-1" opacity="0.95">
+    <!-- Card 3 -->
+    <rect width="260" height="64" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" />
+    <circle cx="26" cy="24" r="7" fill="#ec4899" />
+    <text x="44" y="28" class="card-val">Zero Per-Seat SaaS Lock-In</text>
+    <text x="44" y="48" class="card-label">Open-Source &amp; Free Tiers Included</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: High contrast, clearly readable, never obstructed -->
+  <g transform="translate(80, 0)">
+    <!-- Category Pill Tag -->
+    <g transform="translate(0, 52)">
+      <rect width="360" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="16" cy="16" r="5" fill="#38bdf8" />
+      <text x="32" y="21" class="tagline">Enterprise DevOps &amp; Agile Suite</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 138)">
+      <text class="title">Awesome Self-Hosted</text>
+      <text y="50" class="title" fill="url(#accent-cyan-purple)">Issue &amp; Project Tracking</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="0" y="235" class="subtitle">
+      Curated directory of on-premises trackers, bug tracking systems &amp; agile planning suites.
+    </text>
+
+    <!-- Feature Badges / Highlights -->
+    <g transform="translate(0, 272)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="34" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+        <text x="14" y="22" class="pill-text">🚀 15+ Tools</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(142, 0)">
+        <rect width="170" height="34" rx="8" fill="#1e293b" stroke="#818cf8" stroke-width="1" />
+        <text x="14" y="22" class="pill-text">🛡️ Full Sovereignty</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(324, 0)">
+        <rect width="170" height="34" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1" />
+        <text x="14" y="22" class="pill-text">⚡ Jira Migration</text>
+      </g>
+
+      <!-- Pill 4 -->
+      <g transform="translate(506, 0)">
+        <rect width="160" height="34" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+        <text x="14" y="22" class="pill-text">⭐ Ranked by Stars</text>
+      </g>
+    </g>
+  </g>
+</svg>
