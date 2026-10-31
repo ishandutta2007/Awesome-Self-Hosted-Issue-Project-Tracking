@@ -1,201 +1,123 @@
 # Awesome-Self-Hosted-Issue-Project-Tracking
 
-## Top Self-Hosted Issue & Project Tracking Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on On-Premises Issue Tracking, Agile Planning & Self-Managed DevOps Platforms*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Self-Hosted Issue & Project Tracking**. These tools enable teams to manage bugs, tasks, and sprints on infrastructure they control—preserving data residency, avoiding per-seat cloud pricing, and maintaining full control over customization, while accepting the operational responsibility that self-hosting demands.
-
-
-
-**Examples** include Jira Server (EOL), Redmine, GitLab Self-Managed, GitHub Enterprise Server, Bugzilla, MantisBT, OpenProject, Trac, YouTrack Server, and Phabricator (the category leaders).
-
-
-
-**Open-source emphasis**: Self-Hosted Issue & Project Tracking is a domain where open-source tooling is **mature and production-proven across distinct workflows**, but the landscape carries critical EOL traps. **Jira Server reached end-of-support on February 15, 2024**—no security patches will ever ship again, making it a compliance liability . **Jira Data Center follows with full EOL on March 28, 2029** (new sales ended March 30, 2026; expansions end March 30, 2028) . On the open-source side, **Redmine** remains the battle-tested veteran with two decades of ecosystem and plugins for almost anything , **OpenProject** offers the most complete enterprise-grade project management with Gantt charts, budgets, and cost reporting , **Taiga** excels at proper Scrum mechanics for teams that actually run sprints , and **Trac** continues active development (commits through August 2026) as a minimalist wiki-plus-issue-tracker . The critical caveat: **Phabricator is no longer actively maintained** (Phacility wound down in 2021) —the community fork **Phorge** is the actively updated path forward . **Jira Server must not be deployed for new projects**—migration to an open-source alternative or Jira Cloud is mandatory.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Jira Server](https://www.atlassian.com/)**  
-
-  **END OF SUPPORT: February 15, 2024.** No updates, security patches, bugfixes, or technical support will ever ship . **Do not deploy for new projects**—running it is a compliance liability. Migrate to Data Center, Cloud, or an open-source alternative.
-
-
-
-- **[Jira Data Center](https://www.atlassian.com/)**  
-
-  Self-managed Jira for organizations needing on-premises control. **Critical timeline**: new sales ended March 30, 2026; license expansions end March 30, 2028; **full EOL is March 28, 2029**—after which licenses expire and instances become read-only . Data Center receives no new feature development and no Rovo AI . Organizations still on Data Center must plan migration now.
-
-
-
-- **[GitLab Self-Managed](https://about.gitlab.com/)**  
-
-  Self-hosted DevOps platform with source control, CI/CD, issue tracking, and container registry; provides full control over infrastructure and data residency.
-
-
-
-- **[GitHub Enterprise Server](https://github.com/enterprise)**  
-
-  Self-hosted GitHub for organizations requiring on-premises source control; includes repositories, pull requests, Actions, and security features.
-
-
-
-- **[YouTrack Server](https://www.jetbrains.com/youtrack/)**  
-
-  JetBrains' issue tracker available in self-hosted Server edition; known for search-driven workflows and keyboard-centric UX.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Traditional Issue Trackers
-
-
-
-- **[Redmine](https://github.com/redmine/redmine)**  
-
-  The **battle-tested open-source issue tracker** (GPLv2, free) with two decades of development and an enormous plugin ecosystem—there is a plugin for almost anything . Features: issue tracking, subprojects, roles and permissions, time tracking, wikis, forums, Gantt charts, and calendar views . **Caveats**: the interface is dated; Kanban boards, OIDC login, and most modern conveniences come from **third-party plugins pinned to versions and maintained by volunteers** . **Best for teams comfortable assembling and maintaining a plugin stack**, or anyone already running it—zero license cost, complete control, and a mature ecosystem in exchange for less modern UX and more maintenance .
-
-
-
-- **[Trac](https://github.com/edgewall/trac)**  
-
-  Minimalist open-source **wiki and issue tracking system** (modified BSD License) with **active development**—commits through August 2026 . Integrates with Git and Subversion, provides an integrated wiki, flexible issue tracking, and report facilities via wiki markup that links issues, changesets, documentation, and files together . **Best for small teams wanting a lightweight, proven tracker** with minimal dependencies—but it is minimal by design, lacking modern boards and Agile ceremony support .
-
-
-
-- **[Bugzilla](https://www.bugzilla.org/)**  
-
-  Long-standing open-source **bug tracker** (MPL 2.0) from Mozilla; powerful query system and mature permissions, but dated UI and no Agile/kanban features. **Best for traditional bug tracking** in large, long-running projects—not modern software team workflows.
-
-
-
-- **[MantisBT](https://mantisbt.org/)**  
-
-  Open-source **bug tracker** (GPLv2) with a straightforward interface, email notifications, and plugin support; lighter than Bugzilla and easier to deploy. **Best for small to mid-sized teams** needing simple bug tracking without Agile overhead.
-
-
-
-### Agile & Scrum-Focused
-
-
-
-- **[Taiga](https://github.com/kaleidos-ventures/taiga)**  
-
-  Open-source **Agile project management** (MPL-2.0, free to self-host) organized around **Scrum ceremonies**—sprints, story points, burndown charts, epics, and both Kanban and Scrum boards . **The methodology is baked in**: if your team runs Scrum properly rather than aspirationally, it supports that better than most alternatives . **Caveats**: if you do not run Scrum, much of it is overhead; development pace is slower than newer tools . **Best for teams committed to Scrum** who want sprint mechanics as first-class features .
-
-
-
-### Enterprise-Grade Project Management
-
-
-
-- **[OpenProject](https://github.com/opf/openproject)**  
-
-  The **most complete open-source enterprise project management platform** (GPLv3 Community Edition, AGPLv3 for some components) , continuously developed since 2012 with a sustainable funding model through OpenProject GmbH . Features: **Gantt charts** with drag-and-drop dependencies, critical path visualization, and baseline comparisons; **Scrum boards** with sprint planning, backlog management, and velocity tracking; **time and cost tracking** with budgets and cost reports; meeting management; and product roadmaps . **Caveats**: AGPL copyleft may require legal review; **SSO is reserved for the Enterprise add-on**; the Gantt chart is functional but less polished than dedicated tools . **Best for organizations needing budgets, cost reporting, and baseline comparisons alongside scheduling**—the strongest open-source option for traditional project management at scale .
-
-
-
-### Modern Self-Hosted Alternatives
-
-
-
-- **[Plane](https://github.com/makeplane/plane)**  
-
-  Modern open-source **Jira/Linear alternative** (AGPL-3.0 Community Edition, 59k+ GitHub stars) with work items, cycles (sprints), modules, pages, and five layout views (List, Board, Spreadsheet, Gantt, Calendar) . **Caveats**: **SSO starts at the Pro tier**—not free; development is very active but the Community edition withholds enterprise features . **Best for engineering teams** wanting a modern, actively developed tracker with self-hosting and a clear upgrade path.
-
-
-
-- **[Kaneo](https://github.com/usekaneo/kaneo)**  
-
-  Fast, simple open-source project management (MIT, free to self-host) with Board, List, Calendar, and Gantt views; subtasks, dependencies, labels, comments, and time tracking; **SSO included on every plan**—unlike OpenProject or Plane . Imports Jira Cloud and Jira Data Center projects (issue keys, columns, priorities, labels, assignees, sub-tasks, issue links, comments) . **Caveats**: attachments, sprints, and custom fields do not come across in imports . **Best for teams wanting a lightweight, modern tracker with free SSO and a clear Jira migration path** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Phabricator** — **NO LONGER ACTIVELY MAINTAINED** (Phacility wound down in 2021; no future updates) . The community fork **Phorge** released stable in September 2022 and is actively updated—use Phorge instead for new deployments .
-
-- **Phorge** — Actively maintained fork of Phabricator; provides the same suite of development collaboration tools (code review, task management, project communication) with ongoing updates . **Best for teams already invested in the Phabricator workflow** who need a maintained path forward.
-
-- **Leantime** — Lean project management with kanban, Gantt, goals, and time tracking; AGPL-3.0. **Best for startups** wanting an integrated project management + strategy tool.
-
-
-
-**Frameworks for building custom systems**: For **traditional issue tracking with maximum plugin flexibility**, Redmine . For **enterprise project management with budgets and Gantt**, OpenProject . For **Scrum-first teams**, Taiga . For **modern Jira/Linear replacement**, Plane or Kaneo . For **lightweight wiki+issues**, Trac . **Avoid**: Jira Server (EOL February 2024, no security patches ever) ; plan migration from Jira Data Center before March 28, 2029 ; use Phorge instead of Phabricator for maintained development. No open-source project matches Jira's **enterprise ecosystem depth** or YouTrack's **polished search UX** out of the box—choose based on workflow fit and tolerance for maintenance.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Self-hosted issue trackers handling project data must comply with organizational security policies; **self-hosting places full responsibility for patching, backups, and uptime on the operator** .
-
-- **Jira Server is EOL and must not be deployed**—no security patches have shipped since February 15, 2024, and none ever will . **Jira Data Center ends March 28, 2029**—organizations must plan migration now . **Phabricator is no longer maintained**—use the Phorge fork for active development .
-
-- **Open-source self-hosted tracking is mature but requires operational investment**—Redmine, OpenProject, Taiga, and Plane provide production-grade alternatives. However, **feature gating varies**: OpenProject reserves SSO for Enterprise; Plane reserves SSO for Pro; Redmine relies on community plugins for modern features. Factor these into your evaluation.
-
-- Verify license terms for commercial use; Redmine uses GPLv2 , OpenProject Community uses GPLv3 (with AGPL components) , Taiga uses MPL-2.0 , Plane uses AGPL-3.0 , and Kaneo uses MIT .
-
-
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Trackers](https://img.shields.io/badge/category-issue--tracking-blue.svg)](https://github.com/ishandutta2007/Awesome-Self-Managed-Enterprise-Infrastructure)
+[![Self-Hosted](https://img.shields.io/badge/infrastructure-self--hosted-orange.svg)](https://github.com/ishandutta2007/Awesome-Self-Managed-Enterprise-Infrastructure)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
+
+> A curated list of top **Self-Hosted Issue & Project Tracking** software, enterprise on-premises project management tools, bug trackers, and open-source agile planning platforms.
 
 ---
 
+## Top Self-Hosted Issue & Project Tracking Ecosystem
 
+**Curated Directory of Enterprise SaaS / Self-Managed Platforms & Open-Source GitHub Projects**  
+*Focused on On-Premises Issue Tracking, Agile Planning, Bug Tracking, Kanban Boards & Self-Managed DevOps Workflows*  
 
-**Made for engineering managers, IT administrators, and teams choosing their self-hosted issue tracking stack.**  
+**Last updated: October 2026**
 
-Let's make self-hosted issue tracking more open, but with clear eyes about the Jira EOL deadlines and the feature-gating and maintenance trade-offs that define each path.
+This repository tracks premier **commercial/SaaS platforms** offering self-managed or on-premises editions and active **open-source projects** for **Self-Hosted Issue & Project Tracking**. These solutions enable engineering teams, DevOps practitioners, and privacy-conscious enterprises to manage bugs, sprints, tasks, and roadmaps entirely on infrastructure they own and control—preserving data residency, satisfying strict compliance policies (GDPR, HIPAA, SOC 2), preventing per-seat SaaS lock-in, and unlocking deep database-level customization.
+
+---
+
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Commercial Self-Managed Platforms](#saas--commercial-self-managed-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Framework Selection Matrix](#framework-selection-matrix)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Lifecycle Notes](#disclaimer--lifecycle-notes)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global project portfolio management and issue tracking software sector is estimated at **$7.5 billion in 2026** (projected to exceed $12 billion by 2030 at an ~11.5% CAGR). The market is **moderately fragmented**: mega-cap hyper-scalers and established enterprise giants (Microsoft/GitHub, Atlassian, GitLab) dominate mainstream developer workflows and high-volume corporate contracts, while an agile and fast-growing tier of modern open-core and privacy-centric vendors capture significant market share among sovereignty-focused European enterprises, government/defense contractors, and developer teams seeking modern alternatives to Jira's sunsetting on-premise footprint.
+
+---
+
+## SaaS & Commercial Self-Managed Platforms
+
+The table below lists leading commercial self-managed and enterprise-hosted issue/project tracking solutions, sorted descending by **company scale (market valuation / revenue)**.
+
+| Platform / Vendor | Company Scale (Valuation / Revenue) | Starting Pricing (Paid Tiers) | Free Tier / Trial Limits | Deployment & Compliance Profile |
+| :--- | :--- | :--- | :--- | :--- |
+| **[GitHub Enterprise Server](https://github.com/enterprise)** | ~$3.1T Market Cap (Parent: Microsoft Corp / $1B+ GitHub ARR) | **$21/user/month** (Enterprise plan billed annually) | **45-day free trial** for GitHub Enterprise Server with full enterprise feature access; Cloud Free tier available indefinitely for public/private repos with 2,000 CI Actions min/mo | Bare-metal, AWS, Azure, GCP, or VMware appliance; full GitHub Actions, Git, and issue/project board management behind company firewalls |
+| **[GitLab Self-Managed](https://about.gitlab.com/)** | ~$8.5B Market Cap (~$750M ARR) | **$29/user/month** (Premium tier, billed annually at $348/user/year) | **30-day free trial** of GitLab Ultimate self-managed; **GitLab Community Edition (CE)** is free forever with core Git repo management and issue boards | Omnibus packages, Docker container, and Kubernetes Helm charts; full source control, CI/CD pipelines, container registry, and security governance |
+| **[Jira Data Center](https://www.atlassian.com/software/jira)** | ~$45B Market Cap (~$4.5B ARR, Atlassian) | **$44,000/year** (fixed entry starting tier for 500 users) | **30-day free evaluation license** (extendable up to 90 days); Jira Cloud offers a free forever tier capped at 10 users with 2 GB storage | Multi-node clustered deployment for high availability; new licenses discontinued March 30, 2026; license expansions end March 2028; full EOL March 28, 2029 |
+| **[YouTrack Server](https://www.jetbrains.com/youtrack/)** | ~$3.5B Valuation (~$450M Annual Revenue, JetBrains) | **$4.50/user/month** (Server subscription billed annually for 15+ users, or one-off perpetual package at ~$60/user) | **Free forever plan for up to 10 users** with full features, complete search syntax, and Gantt charts; **14-day free trial** for larger teams | ZIP archive, Docker image; native knowledge base, agile boards, time tracking, smart search, and helpdesk integration |
+| **[Jira Server](https://www.atlassian.com/software/jira)** | ~$45B Market Cap (Atlassian) | **Discontinued / Not Sold** (Previously ~$10 one-time starter up to 10 users) | **None** (End of Life reached February 15, 2024; strictly zero support, no security patches, and no trial licenses available) | Legacy single-node server; compliance liability—do not deploy for new installations |
+
+---
+
+## Open-Source GitHub Projects
+
+The following curated open-source projects provide complete self-hosted control, arranged in descending order by **GitHub Stars**.
+
+| Project | GitHub Stars | License | Primary Tech Stack | Key Focus & Strengths |
+| :--- | :---: | :--- | :--- | :--- |
+| **[Plane](https://github.com/makeplane/plane)** | [![Stars](https://img.shields.io/github/stars/makeplane/plane?style=social&color=white)](https://github.com/makeplane/plane/stargazers) | AGPL-3.0 | Next.js, Django, Python, PostgreSQL, Redis | Modern Jira and Linear alternative with work items, cycles (sprints), modules, and multiple view modes (List, Board, Spreadsheet, Gantt, Calendar). |
+| **[Gitea](https://github.com/go-gitea/gitea)** | [![Stars](https://img.shields.io/github/stars/go-gitea/gitea?style=social&color=white)](https://github.com/go-gitea/gitea/stargazers) | MIT | Go, JavaScript | Painless self-hosted all-in-one software development service featuring lightweight Git hosting, milestone/issue tracking, and Kanban boards. |
+| **[Focalboard](https://github.com/mattermost-community/focalboard)** | [![Stars](https://img.shields.io/github/stars/mattermost-community/focalboard?style=social&color=white)](https://github.com/mattermost-community/focalboard/stargazers) | AGPL-3.0 / MIT | Go, TypeScript, React | Multilingual open-source, self-hosted alternative to Trello, Notion, and Asana; provides Kanban, table, calendar, and gallery views. |
+| **[Wekan](https://github.com/wekan/wekan)** | [![Stars](https://img.shields.io/github/stars/wekan/wekan?style=social&color=white)](https://github.com/wekan/wekan/stargazers) | MIT | Meteor, Node.js, MongoDB | Collaborative open-source Kanban board app built with Meteor; supports swimlanes, custom fields, user permissions, and audit logs. |
+| **[OpenProject](https://github.com/opf/openproject)** | [![Stars](https://img.shields.io/github/stars/opf/openproject?style=social&color=white)](https://github.com/opf/openproject/stargazers) | GPL-3.0 / AGPL-3.0 | Ruby on Rails, Angular, PostgreSQL | Enterprise-grade project management with interactive Gantt charts, Scrum backlogs, sprint boards, time tracking, budgets, and cost reporting. |
+| **[Planka](https://github.com/plankanban/planka)** | [![Stars](https://img.shields.io/github/stars/plankanban/planka?style=social&color=white)](https://github.com/plankanban/planka/stargazers) | AGPL-3.0 | Node.js, React, Redux, PostgreSQL | Elegant real-time Kanban board for agile workgroups; features board background customization, track timers, subtasks, and markdown cards. |
+| **[Phabricator](https://github.com/phacility/phabricator)** | [![Stars](https://img.shields.io/github/stars/phacility/phabricator?style=social&color=white)](https://github.com/phacility/phabricator/stargazers) | Apache-2.0 | PHP, MySQL | Historic software development suite developed by Facebook; includes Maniphest task tracker and Differential code reviewer *(Note: Upstream unmaintained; see Phorge)*. |
+| **[Leantime](https://github.com/Leantime/leantime)** | [![Stars](https://img.shields.io/github/stars/Leantime/leantime?style=social&color=white)](https://github.com/Leantime/leantime/stargazers) | AGPL-3.0 | PHP, JavaScript, MySQL | Strategic and lean project management system tailored for non-project managers, cross-functional teams, and startups; includes milestones, Gantt, and idea boards. |
+| **[Kanboard](https://github.com/kanboard/kanboard)** | [![Stars](https://img.shields.io/github/stars/kanboard/kanboard?style=social&color=white)](https://github.com/kanboard/kanboard/stargazers) | MIT | PHP, SQLite / MySQL / PostgreSQL | Minimalist visual task board software adhering strictly to Kanban methodology, featuring automated workflows, subtasks, and minimal server footprints. |
+| **[Kaneo](https://github.com/usekaneo/kaneo)** | [![Stars](https://img.shields.io/github/stars/usekaneo/kaneo?style=social&color=white)](https://github.com/usekaneo/kaneo/stargazers) | MIT | TypeScript, Node.js | Clean and ultra-fast open-source project management platform featuring built-in free SSO, native Jira project migrations, and responsive Kanban boards. |
+| **[Redmine](https://github.com/redmine/redmine)** | [![Stars](https://img.shields.io/github/stars/redmine/redmine?style=social&color=white)](https://github.com/redmine/redmine/stargazers) | GPL-2.0 | Ruby on Rails, MySQL / PostgreSQL / SQLite | Battle-tested veteran issue tracking web application with flexible role-based access control, Gantt charts, wikis, and an extensive third-party plugin ecosystem. |
+| **[Vikunja](https://github.com/go-vikunja/vikunja)** | [![Stars](https://img.shields.io/github/stars/go-vikunja/vikunja?style=social&color=white)](https://github.com/go-vikunja/vikunja/stargazers) | AGPL-3.0 | Go, TypeScript, Vue.js | Modern and snappy to-do and task management platform supporting Kanban boards, Gantt timelines, list views, reminders, and cross-platform clients. |
+| **[Taiga](https://github.com/taigaio/taiga-docker)** | [![Stars](https://img.shields.io/github/stars/taigaio/taiga-docker?style=social&color=white)](https://github.com/taigaio/taiga-docker/stargazers) | MPL-2.0 | Python, Django, AngularJS | Purpose-built Agile project management platform for Scrum and Kanban enthusiasts, featuring sprint planning, epics, user stories, and burndown analytics. |
+| **[MantisBT](https://github.com/mantisbt/mantisbt)** | [![Stars](https://img.shields.io/github/stars/mantisbt/mantisbt?style=social&color=white)](https://github.com/mantisbt/mantisbt/stargazers) | GPL-2.0 | PHP, MySQL / PostgreSQL | Lightweight web-based bug tracking system balancing power with straightforward simplicity, rich email notifications, and mobile-friendly layouts. |
+| **[Bugzilla](https://github.com/bugzilla/bugzilla)** | [![Stars](https://img.shields.io/github/stars/bugzilla/bugzilla?style=social&color=white)](https://github.com/bugzilla/bugzilla/stargazers) | MPL-2.0 | Perl, MySQL / PostgreSQL / Oracle | Mozilla's enterprise-grade defect and bug tracking system equipped with advanced search queries, automated workflows, and battle-tested security. |
+| **[Trac](https://github.com/edgewall/trac)** | [![Stars](https://img.shields.io/github/stars/edgewall/trac?style=social&color=white)](https://github.com/edgewall/trac/stargazers) | BSD-3-Clause | Python, SQLite / PostgreSQL / MySQL | Enhanced minimalist wiki and issue tracking platform for software development projects, linking commits, tickets, and wiki documentation seamlessly. |
+| **[Phorge](https://github.com/phorgeit/phorge)** | [![Stars](https://img.shields.io/github/stars/phorgeit/phorge?style=social&color=white)](https://github.com/phorgeit/phorge/stargazers) | Apache-2.0 | PHP, MySQL | Community-driven and actively maintained upstream fork of Phabricator, providing task management, Git/Mercurial hosting, and Differential code reviews. |
+
+---
+
+## Framework Selection Matrix
+
+Depending on organizational requirements, consider the following trade-offs:
+
+1. **Enterprise Traditional Project Management (Budgets, Milestones & Gantt)**:
+   - Choose **[OpenProject](https://github.com/opf/openproject)** or **[Redmine](https://github.com/redmine/redmine)**.
+   - *Advantage*: Native Gantt tracking, resource baselines, cost accounting, and deep role/permission hierarchies.
+
+2. **Modern Developer & Linear/Jira Replacements**:
+   - Choose **[Plane](https://github.com/makeplane/plane)** or **[Kaneo](https://github.com/usekaneo/kaneo)**.
+   - *Advantage*: Fluid keyboard shortcuts, cycle/sprint management, clean modern UI, and direct Jira import capabilities.
+
+3. **Lightweight & Agile Kanban Teams**:
+   - Choose **[Planka](https://github.com/plankanban/planka)**, **[Wekan](https://github.com/wekan/wekan)**, or **[Kanboard](https://github.com/kanboard/kanboard)**.
+   - *Advantage*: Low memory footprint, near-zero admin overhead, fast Docker setup, and zero-clutter Kanban workflows.
+
+4. **Integrated All-in-One Code Hosting + Issue Tracking**:
+   - Choose **[Gitea](https://github.com/go-gitea/gitea)** or **[GitLab Self-Managed](https://about.gitlab.com/)**.
+   - *Advantage*: Direct bidirectional linking between Git commits, pull requests, CI/CD pipelines, and issue tickets.
+
+5. **Pure Scrum Discipline**:
+   - Choose **[Taiga](https://github.com/taigaio/taiga-docker)**.
+   - *Advantage*: Out-of-the-box user story estimation, burndown charts, and backlog prioritization.
+
+---
+
+## How to Contribute
+
+We welcome community suggestions, updates, and corrections:
+
+1. Fork this repository.
+2. Update `README.md` with your proposed addition or revision (maintain star sorting and table structure).
+3. Verify that repository links, licenses, and pricing limits are accurate and factual.
+4. Submit a Pull Request with a clear summary of your changes.
+
+---
+
+## Disclaimer & Lifecycle Notes
+
+- This is an independently curated community resource and is not officially affiliated with Atlassian, Microsoft, GitLab, JetBrains, or any project listed.
+- **Jira Server Lifecycle**: Officially reached End of Life (EOL) on **February 15, 2024**. No updates, security patches, or bug fixes are issued. Running Jira Server introduces significant compliance and vulnerability risks.
+- **Jira Data Center Lifecycle**: New license sales were sunset on **March 30, 2026**; license tier expansions terminate on **March 30, 2028**; full EOL occurs on **March 28, 2029**, after which instances become read-only.
+- **Phabricator Status**: Phacility ceased operations in 2021. For active development, choose community fork **[Phorge](https://github.com/phorgeit/phorge)**.
+- **Self-Hosting Responsibility**: Deploying on-premises issue tracking software requires dedicated operational management, including automated database backups, TLS certificate rotations, network security isolation, and regular security patching.
